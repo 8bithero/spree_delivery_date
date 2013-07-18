@@ -3,3 +3,11 @@
 
 en:
   hello: "Hello world"
+  delivery_date: "Delivery Date"
+  start: "Start"
+  stop: "End"
+  
+  activerecord:
+    attributes:
+        spree/order: 
+            delivery_date: "Delivery Date"
