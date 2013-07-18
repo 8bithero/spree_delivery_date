@@ -1,0 +1,19 @@
+<script type="text/javascript" id="sourcecode">
+$(function() {
+$(".datepicker").datepicker();
+});
+</script>
+<div id="set-delivery-date">
+  <fieldset>
+    <legend align="center">Delivery Date</legend>
+    
+    <div class="date-range-filter field">
+      <%= label_tag nil, t(:delivery_date) %>
+      <div class="date-range-fields">
+        <%= f.text_field :delivery_date, :class => 'datepicker', :placeholder => t(:start) %>
+
+        </div>
+    </div>
+
+  </fieldset>
+</div>
