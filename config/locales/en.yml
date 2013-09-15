@@ -5,3 +5,7 @@ en:
   hello: "Hello world"
   start: Start
   stop: Stop
+=======
+  delivery_date: "Delivery Date"
+  start: "Start"
+  stop: "End"
