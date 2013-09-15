@@ -1,0 +1,30 @@
+<%= render 'spree/admin/shared/order_tabs', :current => 'Delivery Date' %>
+
+<%= csrf_meta_tags %>
+
+<div data-hook="admin_order_new_header">
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+</div>
+
+<div class="order-add-delivery-date">
+  <%= form_for :order, url: change_date_path(@order) do |f|%>
+    <fieldset data-hook="admin_comment_form_fields" class="no-border-top">
+      <fieldset class="index no-border-bottom">
+        <legend align="center"><%= Spree.t(:delivery_date) %></legend>
+
+        <div data-hook="delivery_date_fields" class="row">
+          <div class="alpha twelve columns">
+            <%= f.label :delivery_date, "Delivery Date" %><br />
+            <%= f.datetime_select :delivery_date, ampm: true%>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="clear"></div>
+
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button Spree.t(:update_delivery_date), 'icon-arrow-right' %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

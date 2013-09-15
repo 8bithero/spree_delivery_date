@@ -1,7 +1,7 @@
 Spree::Order.class_eval do
   require 'date'
   require 'spree/order/checkout'
-
+  debugger
   attr_accessible :delivery_date
 
   validate :delivery_date, :presence => true, :allow_nil => false
@@ -10,7 +10,7 @@ Spree::Order.class_eval do
   # Ensure that a delivery date is set. We don't want to run these validations until it is
   # Only run the delivery date validations if we are on that step or past.
   def delivery_date_specific_validation
-    if !delivery_date.blank? && ['payment', 'confirm', 'complete'].include?(state)
+    if !delivery_date.blank? 
       cutoff = Time.zone.now.change(:hour => 16, :min => 00) # Gets 4pm in EST time zone (config.time_zone)
 
       if [0, 1, 7].include?(delivery_date.wday)
