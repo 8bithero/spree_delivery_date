@@ -3,16 +3,6 @@
 
 en:
   hello: "Hello world"
-<<<<<<< HEAD
   start: Start
   stop: Stop
-=======
-  delivery_date: "Delivery Date"
-  start: "Start"
-  stop: "End"
-  
-  activerecord:
-    attributes:
-        spree/order: 
-            delivery_date: "Delivery Date"
->>>>>>> 5e8ba2282db629fd7f05825ee26b1111c286053a
+
