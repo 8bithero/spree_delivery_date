@@ -2,9 +2,9 @@
 
 <%= csrf_meta_tags %>
 
-<div data-hook="admin_order_new_header">
+<% if @order.try(:errors).present? %>
   <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
-</div>
+<% end %>
 
 <div class="order-add-delivery-date">
   <%= form_for :order, url: change_date_path(@order) do |f|%>

@@ -18,6 +18,9 @@ Spree::Admin::OrdersController.class_eval do
     #@order.validate
     order.delivery_date = delivery_date2
     order.save
+    unless @order
+      flash[:error]
+    end
     #render :text => order.delivery_date
     
     #order.update!(delivery_date: delivery_date2)
