@@ -16,7 +16,9 @@
           <div class="alpha twelve columns">
           
             <%= f.label :delivery_date, "Delivery Date" %><br />
-            <%= f.datetime_select :delivery_date, ampm: true %>
+            <%= Time.use_zone("La Paz") do 
+                f.datetime_select :delivery_date, ampm: true 
+            end %>
           </div>
         </div>
       </fieldset>
