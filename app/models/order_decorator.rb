@@ -5,7 +5,7 @@ Spree::Order.class_eval do
   attr_accessible :delivery_date
 
   validate :delivery_date, :presence => true, :allow_nil => false
-  validate :delivery_date_specific_validation
+  #validate :delivery_date_specific_validation
 
   # Ensure that a delivery date is set. We don't want to run these validations until it is
   # Only run the delivery date validations if we are on that step or past.
