@@ -13,7 +13,7 @@ Spree::Core::Engine.routes.prepend do
   #  match '/admin/comment_types' => 'admin/comment_types', :via => [:get, :post]
   end
   
-  post 'admin/orders/:id/change_date', to: 'admin/orders#change_date', as: 'change_date'
+  #post 'admin/orders/:id/change_date', to: 'admin/orders#change_date', as: 'change_date'
   
   
 
