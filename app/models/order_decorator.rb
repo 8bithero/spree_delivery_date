@@ -2,7 +2,7 @@ Spree::Order.class_eval do
   require 'date'
   require 'spree/order/checkout'
   #debugger
-  attr_accessible :delivery_date
+  #attr_accessible :delivery_date
 
   validate :delivery_date, :presence => true, :allow_nil => false
   #validate :delivery_date_specific_validation
