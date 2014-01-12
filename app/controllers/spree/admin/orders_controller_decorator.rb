@@ -28,5 +28,9 @@ Spree::Admin::OrdersController.class_eval do
 
     redirect_to delivery_dates_admin_order_url(order)
   end
+  
+  def change_date_params
+    params.require(:order).permit!
+  end
    
 end
