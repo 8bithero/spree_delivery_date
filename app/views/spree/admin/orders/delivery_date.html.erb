@@ -7,7 +7,7 @@
 <% end %>
 
 <div class="order-add-delivery-date">
-  <%= form_for :order, url: change_date_path(@order) do |f|%>
+  <%= form_for :order, url: change_date_admin_order_path(@order) do |f|%>
     <fieldset data-hook="admin_comment_form_fields" class="no-border-top">
       <fieldset class="index no-border-bottom">
         <legend align="center"><%= Spree.t(:delivery_date) %></legend>

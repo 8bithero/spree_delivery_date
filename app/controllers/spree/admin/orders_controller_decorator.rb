@@ -1,7 +1,7 @@
 Spree::Admin::OrdersController.class_eval do
   #after_update :delivery_date_specific_validation
   
-  def delivery_dates
+  def delivery_date
     load_order
   end
   
@@ -26,7 +26,7 @@ Spree::Admin::OrdersController.class_eval do
     #  create_event(order)
     #end
 
-    redirect_to delivery_dates_admin_order_url(order)
+    redirect_to delivery_date_admin_order_url(order)
   end
   
   def change_date_params
