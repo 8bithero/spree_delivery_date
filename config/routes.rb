@@ -1,11 +1,8 @@
 Spree::Core::Engine.routes.prepend do
   namespace :admin do
-    resources :delivery_dates
-    resources :change_dates
     resources :orders do
       member do
         get :delivery_dates
-        get :change_dates
       end
     end
 
