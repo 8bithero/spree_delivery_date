@@ -1,8 +1,9 @@
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.routes.append do
   namespace :admin do
     resources :orders do
       member do
-        get :delivery_dates
+        get :delivery_date
+        #get :delivery_dates
         post :change_date
       end
     end
