@@ -1,5 +1,5 @@
 <% if order.delivery_date != nil %>
-  <td class="align-center"><%= order.delivery_date %></td>
+  <td class="align-center"><%= order.delivery_date.strftime("%Y-%m-%d %l:%M %p") %></td>
 <% else %>
   <td class="align-center">Unknown</td>
 <% end %>
